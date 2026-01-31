@@ -1,99 +1,97 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0; /* No white borders */
     background-color: #f0f0f0; /* For no background image */
 }
 
-.main-nav {
+.main-nav { /* nav bar */
     background-color: #ffcb05;
-    padding: 1rem;
+    padding: 1rem; /* rem is 16px */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* logo left, links right */
     align-items: center;
     border-bottom: 4px solid #3b4cca;
 }
 
-.nav-logo {
+.nav-logo { /* pokeclima nav logo */
     font-size: 1.5rem;
     font-weight: bold;
     color: #3b4cca;
 }
 
-.nav-links a, .nav-links span {
-    margin-left: 15px;
-    text-decoration: none;
+.nav-links a, .nav-links span { /* login and register */
+    margin-left: 1rem; 
+    text-decoration: none; /* no underline for links */
     font-weight: bold;
     color: #3b4cca;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
+.nav-links a:hover { /* links again, but for hover */
+    text-decoration: underline; /* underline when hovering */
 }
 
-.map-wrapper {
+.map-wrapper { /* map */
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: center; /* map always center */
+    margin-top: 20px; /* 20px away from nav */
 }
 
-#map-container {
+#map-container { /* map box */
     height: 600px;
-    width: 100%;
-    max-width: 1000px;
+    width: 100%; /* always max possible width */
+    max-width: 1000px; /* unless it reaches 1000px */
     border: 2px solid #333;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: white; /* just in case map takes awhile to load */
+    border-radius: 10px; /* smooth edges */
 }
 
-.custom-poke-marker {
+.custom-poke-marker { /* custom poke marker */
     background: none;
     border: none;
+    /* no default button styles */
 }
 
 .marker-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* image up, temperature down */
     align-items: center;
     justify-content: center;
     width: 50px !important;
     height: 50px !important;
 }
 
-.marker-img {
+.marker-img { /* the pokémon imagen icon */
     width: 50px !important;
     height: 50px !important;
-    object-fit: contain;
-    filter: drop-shadow(0 0 3px white);
-    transition: transform 0.2s;
+    /* !important is to ignore leaflet's inline styles */
+    object-fit: contain; /* keep aspect ratio */
+    transition: transform 0.2s; /* smooth big on hover */
 }
 
 .marker-img:hover {
-    transform: scale(1.3);
-    cursor: pointer;
-    z-index: 9999;
+    transform: scale(1.3); /* just a big bigger */
+    cursor: pointer; /* mouse pointy hand */
 }
 
 .marker-temp {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     color: #333;
-    padding: 2px 5px;
+    padding: 2px 5px; /* 2 up/down, 5 left/right */
     border-radius: 4px;
     font-size: 11px;
     font-weight: bold;
-    margin-top: -10px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.5);
-    z-index: 100;
+    margin-top: -10px; /* overlap a bit with pokémon */
+    z-index: 100; /* over pokémon and others */
 }
 
-.auth-nav {
+.auth-nav { /* same nav as before but for auths */
     background-color: #ffcb05;
     padding: 10px;
     border-bottom: 4px solid #3b4cca;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* put form a bit lower */
 }
 
-.auth-nav a {
+.auth-nav a { /* go back link */
     text-decoration: none;
     font-weight: bold;
     color: #3b4cca;
@@ -105,7 +103,6 @@ body {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .auth-title {
@@ -117,7 +114,7 @@ body {
 .form-input {
     width: 100%;
     padding: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -131,7 +128,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -146,7 +143,7 @@ body {
     margin-top: 10px;
 }
 
-.auth-footer {
+.auth-footer { /* the "not registered?" text */
     text-align: center;
     margin-top: 15px;
 }
@@ -159,7 +156,7 @@ body {
 
 .admin-panel-layout {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* space between form and map */
     margin-bottom: 30px;
 }
 
@@ -169,7 +166,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* include padding in width */
 }
 
 .btn-add {
@@ -185,9 +182,8 @@ body {
 
 .admin-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* no double borders */
     background: white;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .admin-table th, .admin-table td {
@@ -213,7 +209,6 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .fav-title {
@@ -224,7 +219,7 @@ body {
 
 .fav-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* wrap to next line if needed */
     gap: 15px;
 }
 
@@ -235,7 +230,6 @@ body {
     padding: 10px;
     width: 150px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .fav-card img {
@@ -261,5 +255,5 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none; /* utility class to hide elements */
 }
