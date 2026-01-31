@@ -29,6 +29,7 @@ if (isset($_GET['delete'])) {
     <title>Admin Panel</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="icon" type="image/png" href="https://img.pokemondb.net/sprites/heartgold-soulsilver/back-normal/pikachu.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
@@ -94,4 +95,5 @@ if (isset($_GET['delete'])) {
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
