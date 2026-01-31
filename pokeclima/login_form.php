@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://img.pokemondb.net/sprites/heartgold-soulsilver/back-normal/pikachu.png">
 </head>
 <body>
     
@@ -65,4 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </body>
+
 </html>
